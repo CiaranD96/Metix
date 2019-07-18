@@ -1,0 +1,25 @@
+<body>
+  <header>
+    <h1>My <span>Reminders</span></h1>
+  </header>
+  <div class="container">
+    <h2>Your <span>Daily</span> Reminders...</h2>
+    <form class="new-reminder">
+      <input type="text" name="title" placeholder="Title..." />
+      <input type="text" name="text" placeholder="Type to add reminder..." />
+      <button type="submit">Add Reminder</button>
+    </form>
+    <ul>
+      {{#each reminders}}
+      {{> reminder}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="reminder">
+  <li>
+    <h4>{{ title }}</h4>
+    <p>{{ text }}</p>
+  </li>
+</template>

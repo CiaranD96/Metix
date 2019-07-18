@@ -1,0 +1,77 @@
+$text-primary: #eee;
+$text-secondary: crimson;
+$text-dark: #333;
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+  color: $text-dark;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 80%;
+  margin-top: 2rem;
+
+  h2 {
+    span {
+      color: $text-secondary;
+    }
+  }
+}
+
+header {
+  background-color: $text-dark;
+  color: $text-primary;
+  padding: 0.5rem 1.5rem;
+
+  span {
+    color: $text-secondary;
+  }
+}
+
+ul {
+  padding: 0;
+
+  li {
+    list-style: none;
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Form and input styles
+form {
+  margin-top: 10px;
+  position: relative;
+
+  button {
+    background: $text-secondary;
+    color: $text-primary;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 1px 1px 2px $text-dark;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.new-reminder input {
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $text-secondary;
+  width: 100%;
+  padding: 0.5rem 3rem;
+  font-size: 1em;
+}
+
+.new-task input:focus {
+  outline: 0;
+}

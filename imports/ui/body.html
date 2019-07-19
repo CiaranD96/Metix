@@ -1,18 +1,27 @@
 <body>
   <header>
     <h1>My <span>Reminders</span></h1>
+    {{ > loginButtons}}
   </header>
   <div class="container">
     <h2>Your <span>Daily</span> Reminders...</h2>
+    {{#if currentUser}}
     <form class="new-reminder">
-      <input type="text" name="title" placeholder="Title..." />
-      <input type="text" name="text" placeholder="Type to add reminder..." />
+      <input type="text" name="title" placeholder="Title..." required />
+      <input
+        type="text"
+        name="text"
+        placeholder="Type to add reminder..."
+        required
+      />
       <button type="submit">Add Reminder</button>
     </form>
+
     <ul>
       {{#each reminders}}
       {{> reminder}}
       {{/each}}
     </ul>
+    {{/if}}
   </div>
 </body>

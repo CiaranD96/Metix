@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Reminders } from '../api/reminders.js';
 import './reminder.js';
@@ -23,7 +24,9 @@ Template.body.events({
     Reminders.insert({
       title: title,
       text: text,
-      createdAt: new Date() // current time
+      createdAt: new Date(), // current time
+      owner: Meteor.userId(),
+      username: Meteor.user().username
     });
 
     // Clear form

@@ -20,14 +20,8 @@ Template.body.events({
     const text = target.text.value;
     const title = target.title.value;
 
-    // Insert reminder into collection
-    Reminders.insert({
-      title: title,
-      text: text,
-      createdAt: new Date(), // current time
-      owner: Meteor.userId(),
-      username: Meteor.user().username
-    });
+    // Insert a task into the collection
+    Meteor.call('reminders.insert', title, text);
 
     // Clear form
     target.text.value = '';

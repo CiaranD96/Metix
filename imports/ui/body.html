@@ -1,10 +1,10 @@
 <body>
   <header>
-    <h1>My <span>Reminders</span></h1>
+    <h1>My <span class="span-text">Reminders</span></h1>
     {{ > loginButtons}}
   </header>
   <div class="container">
-    <h2>Your <span>Daily</span> Reminders...</h2>
+    <h2>Your <span class="span-text">Daily</span> Reminders...</h2>
     {{#if currentUser}}
     <form class="new-reminder">
       <input type="text" name="title" placeholder="Title..." required />

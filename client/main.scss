@@ -16,22 +16,12 @@ body {
   flex-flow: column;
   width: 80%;
   margin-top: 2rem;
-
-  h2 {
-    span {
-      color: $text-secondary;
-    }
-  }
 }
 
 header {
   background-color: $text-dark;
   color: $text-primary;
   padding: 0.5rem 1.5rem;
-
-  span {
-    color: $text-secondary;
-  }
 }
 
 ul {
@@ -87,5 +77,9 @@ form {
   border: none;
   position: relative;
   top: -0.7rem;
+  color: $text-secondary;
+}
+
+.span-text {
   color: $text-secondary;
 }

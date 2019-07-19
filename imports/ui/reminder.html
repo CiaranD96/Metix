@@ -2,7 +2,9 @@
   <li class="{{#if checked}}checked{{/if}}">
     <button class="delete">&times;</button>
 
-    <h4>{{ title }} - {{ username }}</h4>
+    <h4>
+      {{ title }} - <span class="span-text">{{ username }}</span>
+    </h4>
     <p>{{ text }}</p>
   </li>
 </template>

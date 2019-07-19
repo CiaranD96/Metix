@@ -1,5 +1,6 @@
 import { Template } from 'meteor/templating';
 import { Reminders } from '../api/reminders.js';
+import './reminder.js';
 import './body.html';
 
 Template.body.helpers({

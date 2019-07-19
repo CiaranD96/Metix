@@ -43,6 +43,9 @@ ul {
 
 ul li {
   list-style: none;
+  border-bottom: 1px solid crimson;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.5rem;
 }
 
 ul li p {
@@ -79,5 +82,16 @@ form button {
 
 .new-task input:focus {
   outline: 0;
+}
+
+.delete {
+  float: right;
+  font-weight: bold;
+  background: none;
+  font-size: 2em;
+  border: none;
+  position: relative;
+  top: -0.7rem;
+  color: crimson;
 }
 /*# sourceMappingURL=main.css.map */

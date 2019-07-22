@@ -1,10 +1,15 @@
 <template name="reminder">
   <li class="{{#if checked}}checked{{/if}}">
+    <input type="checkbox" checked="{{ checked }}" class="toggle-checked" />
+    Mark as complete
     <button class="delete">&times;</button>
 
-    <h4>
-      {{ title }} - <span class="span-text">{{ username }}</span>
+    <h4 class="text">
+      {{ title }} - <span class="text span-text">{{ username }}</span>
     </h4>
-    <p>{{ text }}</p>
+    <p class="text">{{ text }}</p>
+    <p class="text">
+      Due : <span class="text span-text">{{ date }}</span>
+    </p>
   </li>
 </template>

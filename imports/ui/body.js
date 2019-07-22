@@ -19,12 +19,14 @@ Template.body.events({
     const target = event.target;
     const text = target.text.value;
     const title = target.title.value;
+    const date = target.title.date;
 
     // Insert a task into the collection
-    Meteor.call('reminders.insert', title, text);
+    Meteor.call('reminders.insert', title, text, date);
 
     // Clear form
     target.text.value = '';
     target.title.value = '';
+    target.date.value = '';
   }
 });

@@ -44,6 +44,18 @@ ul li p {
   font-size: 1.2rem;
 }
 
+ul .checked {
+  color: #888;
+}
+
+ul .checked .text {
+  text-decoration: line-through;
+}
+
+ul .checked .span-text {
+  color: lightcoral;
+}
+
 form {
   margin-top: 10px;
   position: relative;

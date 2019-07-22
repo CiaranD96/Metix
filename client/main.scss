@@ -36,6 +36,17 @@ ul {
       font-size: 1.2rem;
     }
   }
+
+  .checked {
+    color: #888;
+
+    .text {
+      text-decoration: line-through;
+    }
+    .span-text {
+      color: lightcoral;
+    }
+  }
 }
 
 // Form and input styles

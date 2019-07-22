@@ -15,6 +15,8 @@ Meteor.methods({
       throw new Meteor.Error('not-authorized');
     }
 
+    console.log(title, text, date);
+
     Reminders.insert({
       title,
       text,

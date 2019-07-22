@@ -19,7 +19,7 @@ Template.body.events({
     const target = event.target;
     const text = target.text.value;
     const title = target.title.value;
-    const date = target.title.date;
+    const date = target.date.value;
 
     // Insert a task into the collection
     Meteor.call('reminders.insert', title, text, date);

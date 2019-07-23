@@ -1,7 +1,14 @@
 <body>
-  <header class="navbar justify-content-center bg-light">
-    <h1>My <span class="span-text">Reminders</span></h1>
-    {{ >loginButtons }}
+  <header class="jumbotron jumbotron-fluid bg">
+    <h1 class="display-4 text-center">
+      My <span class="span-text">Reminders</span>
+    </h1>
+    <p class="lead text-center">
+      Keeping all of your reminders in one place...
+    </p>
+    <div class="text-center">
+      {{ >loginButtons }}
+    </div>
   </header>
   <div class="container">
     {{#if currentUser}}
@@ -10,6 +17,7 @@
     </h2>
     <form class="new-reminder">
       <div class="form-group">
+        <label for="Title">Title</label>
         <input
           type="text"
           name="title"
@@ -19,6 +27,7 @@
         />
       </div>
       <div class="form-group">
+        <label for="text">Description</label>
         <input
           type="text"
           name="text"
@@ -28,14 +37,16 @@
         />
       </div>
       <div class="form-group">
-        <input
-          type="datetime-local"
-          name="date"
-          class="form-control"
-          required
-        />
+        <label for="date">Date</label>
+        <input type="date" name="date" class="form-control" required />
       </div>
-      <button type="submit" class="btn btn-danger">Add Reminder</button>
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input type="time" name="time" class="form-control" required />
+      </div>
+      <button type="submit" class="btn btn-danger mb-3">
+        Add Reminder
+      </button>
     </form>
 
     <ul class="list-group">

@@ -20,13 +20,15 @@ Template.body.events({
     const text = target.text.value;
     const title = target.title.value;
     const date = target.date.value;
+    const time = target.time.value;
 
     // Insert a task into the collection
-    Meteor.call('reminders.insert', title, text, date);
+    Meteor.call('reminders.insert', title, text, date, time);
 
     // Clear form
     target.text.value = '';
     target.title.value = '';
     target.date.value = '';
+    target.time.value = '';
   }
 });

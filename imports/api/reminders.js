@@ -6,7 +6,7 @@ export const Reminders = new Mongo.Collection('reminders');
 
 Meteor.methods({
   // Insert data in to database
-  'reminders.insert'(title, text, date) {
+  'reminders.insert'(title, text, date, time) {
     check(text, String);
     check(title, String);
 
@@ -15,12 +15,11 @@ Meteor.methods({
       throw new Meteor.Error('not-authorized');
     }
 
-    console.log(title, text, date);
-
     Reminders.insert({
       title,
       text,
       date,
+      time,
       createdAt: new Date(),
       owner: Meteor.userId(),
       username: Meteor.user().username

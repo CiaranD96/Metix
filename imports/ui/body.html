@@ -1,28 +1,52 @@
 <body>
-  <header>
+  <header class="navbar justify-content-center bg-light">
     <h1>My <span class="span-text">Reminders</span></h1>
-    {{ > loginButtons}}
+    {{ >loginButtons }}
   </header>
   <div class="container">
-    <h2>Your <span class="span-text">Daily</span> Reminders...</h2>
     {{#if currentUser}}
+    <h2 class="text-center">
+      Your <span class="span-text">Daily</span> Reminders...
+    </h2>
     <form class="new-reminder">
-      <input type="text" name="title" placeholder="Title..." required />
-      <input
-        type="text"
-        name="text"
-        placeholder="Type to add reminder..."
-        required
-      />
-      <input type="datetime-local" name="date" id="date" required />
-      <button type="submit">Add Reminder</button>
+      <div class="form-group">
+        <input
+          type="text"
+          name="title"
+          class="form-control"
+          placeholder="Title..."
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          name="text"
+          class="form-control"
+          placeholder="Type to add reminder..."
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="datetime-local"
+          name="date"
+          class="form-control"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-danger">Add Reminder</button>
     </form>
 
-    <ul>
+    <ul class="list-group">
       {{#each reminders}}
       {{> reminder}}
       {{/each}}
     </ul>
+    {{else}}
+    <h2 class="text-center">
+      Please <span class="span-text">log in</span> to view your reminders.
+    </h2>
     {{/if}}
   </div>
 </body>

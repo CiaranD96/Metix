@@ -4,8 +4,8 @@ This application allows users to create an account, log in and set custom remind
 displayed back to the user. The user can delete their own reminders, but not other users. Users can also mark reminders as completed or 
 delete them entirely.
 
-#Installation
+# Installation
 Once the repo has been cloned or downloaded, cd in to the project folder using the command line and run "meteor npm install" and then
-"meteor run".
+"meteor run". The application can then be viewed on the browser on "http://localhost:3000".
 
 

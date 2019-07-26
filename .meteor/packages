@@ -21,3 +21,6 @@ autopublish@1.0.7             # Publish all data to the clients (for prototyping
 accounts-ui
 accounts-password
 meteortesting:mocha
+fullcalendar:fullcalendar
+jquery
+rolljee:bootstrap4

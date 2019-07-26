@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Reminders } from '../api/reminders.js';
 import './reminder.js';
+import './calendar.js';
 import './body.html';
 
 Template.body.helpers({

@@ -15,6 +15,10 @@
     <h2 class="text-center">
       Your <span class="span-text">Daily</span> Reminders...
     </h2>
+    <div class="text-center">
+      {{> calendar}}
+    </div>
+
     <form class="new-reminder">
       <div class="form-group">
         <label for="Title">Title</label>
@@ -54,7 +58,6 @@
       {{> reminder}}
       {{/each}}
     </ul>
-    {{> calendar}}
     {{else}}
     <h2 class="text-center">
       Please <span class="span-text">log in</span> to view your reminders.

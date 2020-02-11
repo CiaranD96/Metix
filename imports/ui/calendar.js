@@ -23,7 +23,7 @@ Template.calendar.onRendered(() => {
       var desc = prompt('Reminder Description');
       var eventData;
 
-      if (title && desc && time) {
+      if (title && desc) {
         eventData = {
           title: title,
           description: desc,
